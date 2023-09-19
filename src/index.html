@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Проводник</title>
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="wallpaper">
+    <div class="window">
+        <!-- Right username and password is anything except an empty string -->
+        <div class="window__loader" id="loader"></div>
+        <div class="app" id="app"></div>
+    </div>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/login-form.js"></script>
+    <script src="scripts/main.js"></script>
+    <script>
+        // comment to remember session
+        document.cookie = "remember-me=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    </script>
+    <script>
+        var app = new App();
+        let type = new Type("", "");
+        let rows = [
+            new Row("default", "images", new Date(2023, 8, 20, 2, 4),
+                new Type("Папка", type.enum.FOLDER), 4452464),
+            new Row("default", "styles", new Date(2023, 8, 20, 2, 4),
+                new Type("Папка", type.enum.FOLDER), 1547801),
+            new Row("default", "main", new Date(2023, 8, 20, 2, 4),
+                new Type("Папка", type.enum.FOLDER), 2017618),
+            new Row("default", "templates", new Date(2023, 8, 20, 2, 4),
+                new Type("Папка", type.enum.FOLDER), 1024324),
+            new Row("default", "index", new Date(2023, 8, 20, 2, 4),
+                new Type("html Файл", type.enum.FILE), 354381),
+        ];
+        app.setRows(rows);
+        app.run();
+    </script>
+</body>
+</html>

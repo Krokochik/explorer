@@ -1,0 +1,21 @@
+{
+  "name": "explorer",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Krokochik",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.6.2",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "hulp": "^0.0.1-security"
+  }
+}

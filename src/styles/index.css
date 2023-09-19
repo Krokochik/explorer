@@ -1,0 +1,87 @@
+.wallpaper {
+    background-image: var(--wallpaper-image);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
+}
+
+.wallpaper:before {
+    background: var(--wallpaper-shading);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.window {
+    display: flex;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+    margin: var(--window-margin);
+    height: calc(100% - 2 * var(--window-margin));
+    user-select: none;
+    background: var(--window-background);
+    backdrop-filter: blur(var(--window-blur));
+    border-radius: var(--window-radius);
+}
+
+.window__loader {
+    width: 0;
+    height: 7px;
+    display: block;
+    background: #0024c7;
+    border-radius: 3px;
+    position: absolute;
+}
+
+.window__loader_active {
+    animation-iteration-count: 1;
+    animation-duration: 1.5s, 1.5s;
+    animation-timing-function: cubic-bezier(0.26, 0.84, 0.73, 0.19), linear;
+    animation-name: loader-load, loader-disappear;
+    animation-fill-mode: revert;
+}
+
+.app {
+    overflow: auto;
+}
+
+.app::-webkit-scrollbar {
+    background: none;
+}
+
+.app::-webkit-scrollbar:vertical {
+    width: 4px;
+}
+
+.app::-webkit-scrollbar:horizontal {
+    height: 4px;
+}
+
+.app::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgb(50, 59, 73);
+}
+
+@keyframes loader-load {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes loader-disappear {
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
