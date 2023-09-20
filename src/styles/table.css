@@ -56,13 +56,17 @@
     cursor: w-resize;
 }
 
+.table-body__row:hover {
+    background: rgba(56, 56, 79, 0.6);
+}
+
 .table-body__img {
-    padding-top: 5px;
     width: 30px;
     height: 30px;
 }
 
 .table-body__cell {
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 13px;
 }

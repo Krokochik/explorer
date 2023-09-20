@@ -255,18 +255,17 @@ class Row {
     }
 
     getPrettyWeight() {
-        if (this.weight === 0) {
-            return '0 Б';
+        const k = 1000;
+        const sizes = ["Б", "КБ", "МБ", "ГБ", "ТБ", "ПБ"];
+        let weight = this.weight;
+        let i = 0;
+
+        while (weight >= k && i < sizes.length - 1) {
+            weight /= k;
+            i++;
         }
 
-        // I found it at the Internet but generally
-        // don't understand what's happening here
-        const k = 1024;
-        const sizes = ["Б", "КБ", "МБ", "ГБ", "ТБ", "ПБ"];
-        const i = Math.round(Math.log(this.weight) / Math.log(k));
-
-        return parseFloat((this.weight / Math.pow(k, i))
-            .toFixed(2)) + ' ' + sizes[i];
+        return `${weight.toFixed(2)} ${sizes[i]}`;
     }
 
     getHtml() {
