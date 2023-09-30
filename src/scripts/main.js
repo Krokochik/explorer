@@ -27,7 +27,7 @@ class MainHandler {
         }
 
         const minWidth = 0;
-        let maxWidth = 500;
+        let maxWidth = Number.MAX_VALUE;
 
         for (let i = 0; i < this.columnGroups.length; i++) {
             const group = this.columnGroups[i];
