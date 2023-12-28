@@ -3,7 +3,7 @@
     --font-main: 'Ubuntu';
     --color: #fff;
     /* Wallpaper settings */
-    --wallpaper-image: url("../images/wallpaper.png");
+    --wallpaper-image: url("/explorer/images/wallpaper.png");
     --wallpaper-shading: rgba(0, 0, 0, 0.3);
     /* Window settings */
     --window-margin: 50px; /* offsets from the viewport */
