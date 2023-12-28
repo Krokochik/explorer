@@ -20,7 +20,7 @@
     <script src="scripts/main.js"></script>
     <script>
         // comment to remember session
-        document.cookie = "remember-me=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+        // document.cookie = "remember-me=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
     </script>
     <script>
         var app = new App();
@@ -35,7 +35,7 @@
             new Row("default", "templates", new Date(2023, 8, 20, 2, 4),
                 new Type("Folder", type.enum.FOLDER), 1024324),
             new Row("default", "index", new Date(2023, 8, 20, 2, 4),
-                new Type("html Файл", type.enum.FILE), 354381),
+                new Type("File HTML", type.enum.FILE), 354381),
         ];
         app.setRows(rows);
         app.run();
